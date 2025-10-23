@@ -3,7 +3,7 @@ import flet_video as fv
 
 def main(page: ft.Page):
     page.title = "Padres de la informatica"
-    page.bgcolor = ft.Colors.BLACK87
+    page.bgcolor = ft.Colors.PURPLE_200
     
     videos = [
         {
@@ -41,8 +41,8 @@ def main(page: ft.Page):
     indice_actual = [0]
     contendedor = ft.Container(width=700, height=600)
     
-    boton_anterior = ft.ElevatedButton("⏮ Anterior", width=150)
-    boton_siguiente = ft.ElevatedButton("Siguiente ⏭ ", width=150)
+    boton_anterior = ft.ElevatedButton("⏮ Anterior", width=150, bgcolor=ft.Colors.PURPLE_300)
+    boton_siguiente = ft.ElevatedButton("Siguiente ⏭ ", width=150, bgcolor=ft.Colors.PURPLE_300)
     
     def mostrar_video():
         vid = videos[indice_actual[0]]
@@ -56,8 +56,8 @@ def main(page: ft.Page):
                     autoplay = True,
                     show_controls = True,
                 ),
-                ft.Text(vid["titulo"], size=28, weight=ft.FontWeight.BOLD, color=ft.Colors.WHITE),
-                ft.Text(vid["descripcion"], size=16, italic=True, text_align=ft.TextAlign.CENTER, color=ft.Colors.WHITE70),
+                ft.Text(vid["titulo"], size=28, weight=ft.FontWeight.BOLD, bgcolor=ft.Colors.PINK_200),
+                ft.Text(vid["descripcion"], size=16, italic=True, text_align=ft.TextAlign.CENTER, bgcolor=ft.Colors.PINK_200a),
                 ft.Row([boton_anterior, boton_siguiente],
                        alignment=ft.MainAxisAlignment.CENTER,
                        spacing=40)
